@@ -36,9 +36,7 @@ public class Toolstore extends NormalLoc {
                     System.out.println("\ngoodbye!");
                 }
             }
-            case 3 -> {
-                System.out.println("\ngoodbye!");
-            }
+            case 3 -> System.out.println("\ngoodbye!");
             default -> throw new IllegalArgumentException("\nunvalid value!");
         }
         return true;
@@ -75,29 +73,25 @@ public class Toolstore extends NormalLoc {
     }
 
     private void buyArmor(int selItemID) {
-        int avoid = 0, price = 0;
-        String armorName = null;
+        int avoid, price;
+        String armorName;
         switch (selItemID) {
-            case 1: {
+            case 1 -> {
                 price = 15;
                 avoid = 1;
                 armorName = "light armor";
-                break;
             }
-            case 2: {
+            case 2 -> {
                 price = 25;
                 avoid = 3;
                 armorName = "medium armor";
-                break;
             }
-            case 3: {
+            case 3 -> {
                 price = 50;
                 avoid = 5;
                 armorName = "heavy armor";
-                break;
             }
-            default:
-                throw new IllegalArgumentException("\nunvalid value!");
+            default -> throw new IllegalArgumentException("\nunvalid value!");
         }
 
         if (price <= player.getMoney()) {
@@ -113,29 +107,25 @@ public class Toolstore extends NormalLoc {
     }
 
     private void buyWeapon(int selItemID) {
-        int damage = 0, price = 0;
-        String weaponName = null;
+        int damage, price;
+        String weaponName;
         switch (selItemID) {
-            case 1: {
+            case 1 -> {
                 price = 25;
                 damage = 2;
                 weaponName = "pistol";
-                break;
             }
-            case 2: {
+            case 2 -> {
                 price = 35;
                 damage = 3;
                 weaponName = "sword";
-                break;
             }
-            case 3: {
+            case 3 -> {
                 price = 45;
                 damage = 7;
                 weaponName = "rifle";
-                break;
             }
-            default:
-                throw new IllegalArgumentException("\nunvalid value!");
+            default -> throw new IllegalArgumentException("\nunvalid value!");
         }
 
         if (price <= player.getMoney()) {
@@ -154,8 +144,7 @@ public class Toolstore extends NormalLoc {
         while (true) {
             try {
                 String input = sc.nextLine();
-                int choice = Integer.parseInt(input);
-                return choice;
+                return Integer.parseInt(input);
             } catch (NumberFormatException e) {
                 System.out.print("\nplease enter a valid number: ");
             }

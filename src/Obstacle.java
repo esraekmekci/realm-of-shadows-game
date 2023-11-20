@@ -1,8 +1,11 @@
 import java.util.Random;
 
 public class Obstacle {
-    private int damage, health, award, maxNumber;
-    private String name;
+    private final int damage;
+    private final int award;
+    private final int maxNumber;
+    private final String name;
+    private int health;
 
     public Obstacle(int damage, int health, int award, int maxNumber, String name) {
         this.damage = damage;
@@ -21,10 +24,6 @@ public class Obstacle {
         return damage;
     }
 
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-
     public int getHealth() {
         return health;
     }
@@ -37,24 +36,8 @@ public class Obstacle {
         return award;
     }
 
-    public void setAward(int award) {
-        this.award = award;
-    }
-
-    public int getMaxNumber() {
-        return maxNumber;
-    }
-
-    public void setMaxNumber(int maxNumber) {
-        this.maxNumber = maxNumber;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 

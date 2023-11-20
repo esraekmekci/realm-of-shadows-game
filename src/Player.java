@@ -1,10 +1,11 @@
 import java.util.Scanner;
 
 public class Player {
+    private final String name;
+    private final Inventory inv;
     Scanner sc = new Scanner(System.in);
     private int damage, health, money, maxHealth;
-    private String name, chrName;
-    private Inventory inv;
+    private String chrName;
 
 
     public Player(String name) {
@@ -86,10 +87,6 @@ public class Player {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getChrName() {
         return chrName;
     }
@@ -100,10 +97,6 @@ public class Player {
 
     public Inventory getInv() {
         return inv;
-    }
-
-    public void setInv(Inventory inv) {
-        this.inv = inv;
     }
 
     public int getMaxHealth() {

@@ -32,21 +32,21 @@ public class Game {
             System.out.println("4- river ---> did someone say werewolf? oh no...");
             System.out.println("5- toolstore ---> let's get a little stronger!");
 
-			int selectLoc = 0;
+            int selectLoc = 0;
 
-			while (selectLoc < 1 || selectLoc > 5) {
-				try {
-					System.out.print("\nhey there! pick a number between 1 and 5, okay?: ");
-					String input = sc.nextLine();
-					selectLoc = Integer.parseInt(input);
+            while (selectLoc < 1 || selectLoc > 5) {
+                try {
+                    System.out.print("\nhey there! pick a number between 1 and 5, okay?: ");
+                    String input = sc.nextLine();
+                    selectLoc = Integer.parseInt(input);
 
-					if (selectLoc < 1 || selectLoc > 5) {
-						System.out.println("\noops, that's not right! i said between 1 and 5.");
-					}
-				} catch (NumberFormatException e) {
-					System.out.println("\noopsie! seems like that's not a number. how about picking a valid number?");
-				}
-			}
+                    if (selectLoc < 1 || selectLoc > 5) {
+                        System.out.println("\noops, that's not right! i said between 1 and 5.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("\noopsie! seems like that's not a number. how about picking a valid number?");
+                }
+            }
 
             switch (selectLoc) {
                 case 1 -> location = new Home(player);

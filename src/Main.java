@@ -4,13 +4,11 @@ public class Main {
         try {
             Game game = new Game();
             game.login();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("\nan error occurred. i didn't see that coming. let's try again.\n");
             Game game = new Game();
             game.login();
-        }
-        finally {
+        } finally {
             System.out.println("\nthanks for playing! see you next time!\n");
             System.exit(0);
         }

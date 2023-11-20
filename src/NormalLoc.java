@@ -5,7 +5,4 @@ public abstract class NormalLoc extends Location {
         this.name = name;
     }
 
-    public boolean getLocation() {
-        return false;
-    }
 }
