@@ -9,7 +9,7 @@ players engage in battles with monsters by choosing different characters.
 
 1. Clone the repository to your local machine.
 
-   `git clone https://github.com/esraekmekci/RealmOfShadows.git`
+   `git clone https://github.com/esraekmekci/realm-of-shadows-game.git`
 2. Open the project in your IDE of choice.
 3. Run the `Main` class.
 4. Enjoy!
